@@ -1,0 +1,43 @@
+Mahdi Shariff - United Kingdom | LinkedIn
+
+
+Run Your Code on Specific Pages
+
+Crossrider appAPI.matchPages lets you identify url patterns easily.
+
+>> appAPI.matchPages(RulePattern)
+RulePattern can be either a regular expression or DOS's match patterns. i.e "*.google.com/*"
+
+Example Code:
+>> if (appAPI.matchPages("*.google.com/*")) return;
+
+The above example will exit the code if the current URL will match all google.com's pages (with a subdomain).
+
+line 180 README
+
+Send message from the Page Code to the Background Code:
+-------------------------------------------------------
+appAPI.message.toBackground({action:"action_name", your_key:"your_value"});    
+
+
+And listen to it in the Background Code:
+-----------------------------------------
+appAPI.message.addListener(function(msg) {
+  if (msg.action == "action_name") {
+     // do something in the background
+  } else {
+    if (msg.your_key == "your_value") {
+      // do something else
+    }      
+  }   
+});
+
+11.51 
+Filter, and sub filters, list of filter names from DB.
+
+
+we want to hook into an event to get the dom, and manipulate it before
+it's been loading in the page. 
+
+
+
